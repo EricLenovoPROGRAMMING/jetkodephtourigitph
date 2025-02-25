@@ -24,6 +24,6 @@
 	<div style:color="#fffd" style:display="grid" style:place-items="center">
 		<div style:display="flex" style:flex-direction="column" style:position="absolute"
 		webstyle:height="35" style:width="32em"
-		style:background="linear-gradient(to bottom, #00f0, #000f)" value="sukablyad"></div>
+		style:background="linear-gradient(to bottom, #00f0, #000f)" value=""></div>
 	</div>
 </content>
