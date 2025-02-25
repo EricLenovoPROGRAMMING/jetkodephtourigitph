@@ -1,0 +1,36 @@
+<xml>
+
+</xml>
+<metadata>
+	<name>MAIN MENU</name>
+	<title>Main Title</title>
+	<keyframes>
+		<animation name="fade-right">
+			<keyframe t="0%" a="
+			 	opacity: 0%;
+				right: 11em;
+			 " />
+			<keyframe t="100%" a="
+			 	opacity: 100%;
+				right: 0em;
+			 " />
+		</animation>
+	</keyframes>
+	<script>
+		async function init() {
+			let jsonString = await load("json/luzon.json");
+			let json = JSON.parse(json);
+			for (let elem of json) {
+				let a = document.createElement("JETK-indigenous-button");
+				a.id = uuid();
+				a.style.width = "100%";
+			}
+		}
+		init();
+	</script>
+</metadata>
+<content>
+	<div style:color="#fffd">
+
+	</div>
+</content>

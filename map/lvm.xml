@@ -1,0 +1,29 @@
+<xml>
+
+</xml>
+<metadata>
+	<name>MAIN MENU</name>
+	<title>Main Title</title>
+	<keyframes>
+		<animation name="fade-right">
+			<keyframe t="0%" a="
+			 	opacity: 0%;
+				right: 11em;
+			 " />
+			<keyframe t="100%" a="
+			 	opacity: 100%;
+				right: 0em;
+			 " />
+		</animation>
+	</keyframes>
+	<script>
+		
+	</script>
+</metadata>
+<content>
+	<div style:color="#fffd" style:display="grid" style:place-items="center">
+		<div style:display="flex" style:flex-direction="column" style:position="absolute"
+		webstyle:height="35" webstyle:width="40"
+		style:background="linear-gradient(to bottom, #00f0, #000f)" value="sukablyad"></div>
+	</div>
+</content>

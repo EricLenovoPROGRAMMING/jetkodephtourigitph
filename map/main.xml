@@ -1,0 +1,110 @@
+
+<metadata>
+	<name>MAIN MENU</name>
+	<title>Main Title</title>
+	<keyframes>
+		<animation name="fade-right">
+			<keyframe t="0%" a="
+			 	opacity: 0%;
+				right: 11em;
+			 " />
+			<keyframe t="100%" a="
+			 	opacity: 100%;
+				right: 0em;
+			 " />
+		</animation>
+		<animation name="hover">
+			<keyframe t="0%" a="
+			 	--red: 0%;
+				top: 11em;
+			 " />
+			<keyframe t="500%" a="
+			 	opacity: 100%;
+				right: 0em;
+			 " />
+		</animation>
+	</keyframes>
+	<script>
+		"use-strict";
+		let d = document.getElementsByTagName("JETK-head-button");
+		console.log(d);
+		let isConfirm = true;
+		let fun = (event) => {
+			//console.log (event.target.scrollTop, contentSize.height);'
+			let l = ((event.target.scrollTop / contentSize.height) > 0.9);
+			if (isConfirm !== (l)) {
+				isConfirm = (l);
+				for (let gi = 0; gi < 3; gi++) {
+					let g = d[gi];
+					g.style.display = (isConfirm && gi != 0) ? "flex" : "none";	
+				}
+			}
+			
+		}
+		for (let ts of ["scroll", 'resize']) content.addEventListener(ts, event => {fun(event)});
+		fun({target: {	
+			scrollTop: -1
+		}});
+	</script>
+
+	<style>	
+	</style>
+	
+</metadata>
+<content>
+	<div style:color="#fff">
+		<div style:position="relative" fill="true">
+			<div style:position="absolute" style:user-select="none">
+				<photo src="images/igorot.jpg" fill="true" style:user-select="none" listener:contextmenu="" />
+			</div>
+			<div style:position="absolute" fill="true" style:bottom="0">
+				<div style:display="flex" style:flex-direction="column" style:position="absolute"
+					webstyle:height="8"
+					style:bottom="0px" style:width="100%"
+					style:background="linear-gradient(to bottom, #0000, #000f)">
+					<te style:position="relative" style:margin-left="1%"
+						animation="fade-right/800ms/1/ease-out/0s"
+						style:opacity="0%" webstyle:font-size-em="1"
+						listener:animationend="event.target.style.opacity = '100%'"
+						value="DISCOVER THE RICH TAPESTRY OF"></te>
+					<te style:position="relative" style:margin-left="1%"
+						animation="fade-right/800ms/1/ease-out/250ms"
+						style:opacity="0%" webstyle:font-size-em="1.4"
+						listener:animationend="event.target.style.opacity = '100%'"
+						value="THE INDIGENOUS GROUPS IN THE PHILIPPINES"></te>
+					<div style:position="relative" style:display="flex"
+						style:justify-content="center" style:align-items="center" style:width="100"
+						webstyle:height="4" style:bottom="0">
+						<div style:display="flex" style:justify-content="center"
+							style:align-items="center"
+							listener:click="loadURL('lvm')" 
+							listener:mouseover="" styleproperty:red="125"
+							styleproperty:green="0" styleproperty:blue="180"
+							styleproperty:alpha="0.5" webstyle:width="10"
+							webstyle:height="2" style:text-align="center" style:border-radius="20px"
+							style:margin-left="0.4em" webstyle:margin-right="0.4"
+							style:background-color="rgba(var(--red), var(--green), var(--blue), var(--alpha))"
+							webstyle:border-width="0.7"
+							style:border-color="rgba(calc(var(--red) + 20), calc(var(--green) + 20), calc(var(--blue) + 20), (var(--alpha)))">
+							<div style:font-family="arial" value="Indigenous Groups"></div>
+						</div>
+						<div style:display="flex" style:justify-content="center"
+							style:align-items="center"
+							listener:click="sendServer('Hello World')" style:background="#342"
+							webstyle:width="10"
+							webstyle:height="2" style:text-align="center" style:border-radius="20px"
+							style:margin-left="0.4em" style:margin-right="0.4em">
+							<div style:font-family="arial" value="About"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div webstyle:height="322	" style:width="100%">
+			<div style:font-family="arial" value="Introduction (Coming Soon)" webstyle:margin-left	="0.4" webstyle:font-size-em="2"></div>	
+		</div>
+
+
+	</div>
+</content>
