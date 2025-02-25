@@ -23,7 +23,7 @@
 			for (let elem of json) {
 				let a = document.createElement("JETK-indigenous-button");
 				a.id = uuid();
-				a.style.width = "100%";
+				a.style.width = "6em";
 			}
 		}
 		init();
